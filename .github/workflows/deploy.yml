@@ -30,7 +30,7 @@ jobs:
           npm run export
 
       - name: Upload static site
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
           path: src/out
 
