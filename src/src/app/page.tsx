@@ -1,7 +1,11 @@
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello world!</h1>
+    <div className="min-h-screen bg-gray-100">
+      <Header />
+      <Hero />
     </div>
   );
 }
