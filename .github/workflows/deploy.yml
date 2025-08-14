@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
 
     steps:
       - name: Checkout code
@@ -23,7 +27,7 @@ jobs:
           cd src
           npm ci
 
-      - name: Build and export static site
+      - name: Build static site
         run: |
           cd src
           npm run build
