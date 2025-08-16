@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar';
 import "./globals.css";
 
 export default function RootLayout({
@@ -8,7 +9,10 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <body>
-        {children}
+        <div className='flex flex-col pt-[96px]'>
+          <Navbar />
+          {children}
+        </div>
       </body>
     </html>
   );
