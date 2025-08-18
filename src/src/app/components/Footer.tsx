@@ -16,6 +16,7 @@ import {
   FOOTER_COPYRIGHT_PREFIX,
   FOOTER_RESPONSIBLE_TECH,
   FOOTER_DEVELOPER,
+  FOOTER_ADDRESS,
   getWhatsappContactUrl,
 } from "../constants/constants";
 
@@ -69,6 +70,7 @@ const Footer: React.FC = () => {
           </h2>
           <p className={`${colors.footerText}`}>{FOOTER_PHONE}</p>
           <p className={`${colors.footerText}`}>{FOOTER_EMAIL}</p>
+          <p className={`${colors.footerText}`}>{FOOTER_ADDRESS}</p>
           <div className="flex gap-4 mt-2 text-gray-200">
             <a href="#" className={`${colors.footerLinkHover}`}>
               <FaFacebookF />

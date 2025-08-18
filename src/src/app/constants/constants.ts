@@ -99,6 +99,7 @@ export const FOOTER_COPYRIGHT_PREFIX = "Todos os direitos reservados.";
 export const FOOTER_RESPONSIBLE_TECH =
   "Responsável técnico: Dr. Jales Abraão Neto - CRM-SC XXXXX |";
 export const FOOTER_DEVELOPER = "Francisco Lucas";
+export const FOOTER_ADDRESS = "Endereço: Rua 15 novembro 788, Blumenau SC";
 
 export const ABOUT_SECTION_MISSION = "Nossa Missão";
 export const ABOUT_SECTION_VALUES = "Nossos Valores";
