@@ -43,6 +43,11 @@ export const IMG_ABOUT_IMAGE_MISSION_SRC = "/bg_01.png";
 export const IMG_ABOUT_IMAGE_STRUCTURE_SRC = "/bg_01.png";
 export const IMG_ABOUT_IMAGE_TEAM_SRC = "/bg_01.png";
 export const IMG_ABOUT_IMAGE_COMMUNITY_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_MEMBROS_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_ARTICULACOES_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_ABDOMEN_TOTAL_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_ABDOMEN_SUPERIOR_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_CAROTIDA_DOPPLER_SRC = "/bg_01.png";
 
 // Labels de navegação
 export const NAV_ITEM_SOBRE = "Sobre nós";
@@ -140,32 +145,56 @@ export const EXAMS_SECTION_DESC2 =
 
 export const EXAMS_LIST = [
   {
-    title: "Ultrassom Abdominal",
+    title: "Ultrassom de Carótida com Doppler",
     principle:
-      "O ultrassom usa ondas sonoras de alta frequência para gerar imagens dos órgãos internos.",
+      "Avalia fluxo sanguíneo e presença de obstruções nas artérias carótidas.",
     procedure:
-      "O paciente fica deitado, o técnico aplica gel e move o transdutor sobre a região abdominal.",
-    preparation: "Jejum de 6-8 horas é recomendado para melhor visualização.",
-    imgSrc: IMG_EXAM_ULTRASSOM_ABDOMINAL_SRC,
+      "Paciente deitado, transdutor com Doppler é movido sobre a região do pescoço.",
+    preparation: "Sem preparo especial necessário.",
+    imgSrc: IMG_EXAM_ULTRASSOM_CAROTIDA_DOPPLER_SRC,
   },
   {
-    title: "Ultrassom Obstétrico",
+    title: "Ultrassom de Abdômen Superior",
     principle:
-      "Avalia o desenvolvimento fetal e a saúde do bebê usando ondas sonoras.",
+      "Examina fígado, vesícula, pâncreas e rins usando ondas sonoras.",
     procedure:
-      "Aplicação de gel sobre o abdômen e movimentação do transdutor para captar imagens do feto.",
-    preparation:
-      "Bebês ou gestantes devem ingerir líquidos para a bexiga cheia melhorar a visualização.",
-    imgSrc: IMG_EXAM_ULTRASSOM_OBSTETRICO_SRC,
+      "Paciente deitado, gel aplicado e transdutor movido sobre abdômen superior.",
+    preparation: "Jejum de 6-8 horas para melhor visualização.",
+    imgSrc: IMG_EXAM_ULTRASSOM_ABDOMEN_SUPERIOR_SRC,
+  },
+  {
+    title: "Ultrassom de Abdômen Total",
+    principle:
+      "Avalia órgãos do abdômen superior e inferior, incluindo bexiga e próstata/útero.",
+    procedure:
+      "Paciente deitado, gel aplicado e transdutor movido sobre toda a região abdominal.",
+    preparation: "Jejum de 6-8 horas e bexiga cheia se solicitado.",
+    imgSrc: IMG_EXAM_ULTRASSOM_ABDOMEN_TOTAL_SRC,
+  },
+  {
+    title: "Ultrassom de Articulações",
+    principle:
+      "Examina estruturas articulares como tendões, ligamentos e derrames.",
+    procedure:
+      "Transdutor movido sobre a articulação de interesse com auxílio de gel.",
+    preparation: "Sem preparo especial necessário.",
+    imgSrc: IMG_EXAM_ULTRASSOM_ARTICULACOES_SRC,
   },
   {
     title: "Ultrassom de Tireoide",
-    principle:
-      "Avalia tamanho, forma e nódulos da glândula tireoide por ondas sonoras.",
+    principle: "Avalia tamanho, forma e nódulos da glândula tireoide.",
     procedure:
-      "Paciente deitado, pescoço exposto, transdutor movido sobre a região da tireoide.",
+      "Paciente deitado, pescoço exposto, transdutor movido sobre a região cervical.",
     preparation: "Sem preparo especial necessário.",
     imgSrc: IMG_EXAM_ULTRASSOM_TIREOIDE_SRC,
+  },
+  {
+    title: "Ultrassom de Membros",
+    principle: "Avalia músculos, vasos e tecidos dos braços ou pernas.",
+    procedure:
+      "Transdutor com gel é movido sobre a região do membro a ser estudado.",
+    preparation: "Sem preparo especial necessário.",
+    imgSrc: IMG_EXAM_ULTRASSOM_MEMBROS_SRC,
   },
 ];
 
