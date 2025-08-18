@@ -27,23 +27,35 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         {/* Logo e descrição */}
         <div className="flex flex-col gap-4">
-          <h1 className={`text-2xl font-bold bg-blue-50 ${colors.logoText} bg-clip-text`}>
+          <h1
+            className={`text-2xl font-bold bg-blue-50 ${colors.logoText} bg-clip-text`}
+          >
             {FOOTER_LOGO_TEXT}
           </h1>
-          <p className={`${colors.footerText} max-w-xs`}>{FOOTER_DESCRIPTION}</p>
+          <p className={`${colors.footerText} max-w-xs`}>
+            {FOOTER_DESCRIPTION}
+          </p>
         </div>
 
         {/* Links úteis */}
         <div className="flex flex-col gap-2">
-          <h2 className={`font-semibold ${colors.footerText}`}>{FOOTER_SECTION_LINKS}</h2>
+          <h2 className={`font-semibold ${colors.footerText}`}>
+            {FOOTER_SECTION_LINKS}
+          </h2>
           <ul className="flex flex-col gap-1">
             <li>
-              <a href="/about" className={`${colors.footerText} ${colors.footerLinkHover}`}>
+              <a
+                href="/about"
+                className={`${colors.footerText} ${colors.footerLinkHover}`}
+              >
                 {FOOTER_LINK_ABOUT}
               </a>
             </li>
             <li>
-              <a href="/exams" className={`${colors.footerText} ${colors.footerLinkHover}`}>
+              <a
+                href="/exams"
+                className={`${colors.footerText} ${colors.footerLinkHover}`}
+              >
                 {FOOTER_LINK_EXAMS}
               </a>
             </li>
@@ -52,7 +64,9 @@ const Footer: React.FC = () => {
 
         {/* Contato */}
         <div className="flex flex-col gap-2">
-          <h2 className={`font-semibold ${colors.footerText}`}>{FOOTER_SECTION_CONTACT}</h2>
+          <h2 className={`font-semibold ${colors.footerText}`}>
+            {FOOTER_SECTION_CONTACT}
+          </h2>
           <p className={`${colors.footerText}`}>{FOOTER_PHONE}</p>
           <p className={`${colors.footerText}`}>{FOOTER_EMAIL}</p>
           <div className="flex gap-4 mt-2 text-gray-200">
@@ -62,7 +76,10 @@ const Footer: React.FC = () => {
             <a href="#" className={`${colors.footerLinkHover}`}>
               <FaInstagram />
             </a>
-            <a href={getWhatsappContactUrl(FOOTER_WHATSAPP_MESSAGE)} className={`${colors.footerLinkHover}`}>
+            <a
+              href={getWhatsappContactUrl(FOOTER_WHATSAPP_MESSAGE)}
+              className={`${colors.footerLinkHover}`}
+            >
               <FaWhatsapp />
             </a>
           </div>
@@ -70,7 +87,9 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Copyright */}
-      <div className={`mt-10 border-t border-gray-700 pt-4 text-center ${colors.footerText} text-sm`}>
+      <div
+        className={`mt-10 border-t border-gray-700 pt-4 text-center ${colors.footerText} text-sm`}
+      >
         &copy; {currentYear} {FOOTER_LOGO_TEXT}. {FOOTER_COPYRIGHT_PREFIX}
         <div className={`mt-2 text-xs`}>
           {FOOTER_RESPONSIBLE_TECH} Desenvolvido por{" "}

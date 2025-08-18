@@ -1,18 +1,18 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa6";
-import { 
-  colors, 
+import {
+  colors,
   getWhatsappContactUrl,
   ABOUT_TAG,
   PRESENTATION_H1,
   PRESENTATION_H3,
   BUTTON_EXAMS,
   BUTTON_WHATSAPP,
-  WHATSAPP_MESSAGE_BOOKING
+  WHATSAPP_MESSAGE_BOOKING,
 } from "../constants/constants";
 
 const Presentation: React.FC = () => (
