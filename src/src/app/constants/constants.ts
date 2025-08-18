@@ -7,8 +7,8 @@ export const colors = {
   navbarText: "text-gray-800",
   navbarTextHover: "hover:text-teal-500",
   aboutTagBg: "bg-teal-50",
-  aboutGradientH1: "from-cyan-600 via-blue-500 to-indigo-500",
-  aboutGradientH3: "from-blue-500 via-cyan-400 to-teal-600",
+  aboutGradientH1: "bg-gradient-to-r from-cyan-600 via-blue-500 to-indigo-500",
+  aboutGradientH3: "bg-gradient-to-r from-blue-500 via-cyan-400 to-teal-600",
   buttonPrimary: "bg-gradient-to-r from-cyan-500 via-blue-400 to-indigo-400",
   buttonPrimaryText: "text-white",
   buttonPrimaryHover: "hover:opacity-90",
@@ -19,8 +19,16 @@ export const colors = {
   menuBorder: "border-gray-300",
   menuItemText: "text-gray-800",
   menuItemHover: "hover:text-teal-500",
-  radialBg: "bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,180,180,0.2),rgba(0,60,80,0))]",
+  radialBg:
+    "bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,180,180,0.2),rgba(0,60,80,0))]",
   pageBg: "bg-gray-50",
   textPrimary: "text-gray-800",
   textSecondary: "text-gray-600",
+  footerBg: "bg-gray-900",
+  footerText: "text-gray-200",
+  footerLinkHover: "hover:text-teal-400",
+};
+
+export const getWhatsappContactUrl = (message: string) => {
+  return `https://wa.me/+5599982687036${message ? `?text=${encodeURIComponent(message)}` : ""}`;
 };
