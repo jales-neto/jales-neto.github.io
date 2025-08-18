@@ -1,9 +1,19 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { FaWhatsapp } from "react-icons/fa6";
-import { colors, getWhatsappContactUrl } from "../constants/constants";
+import { 
+  colors, 
+  getWhatsappContactUrl,
+  ABOUT_TAG,
+  PRESENTATION_H1,
+  PRESENTATION_H3,
+  BUTTON_EXAMS,
+  BUTTON_WHATSAPP,
+  WHATSAPP_MESSAGE_BOOKING
+} from "../constants/constants";
 
 const Presentation: React.FC = () => (
   <div
@@ -34,20 +44,20 @@ const Presentation: React.FC = () => (
         <span
           className={`px-2 py-1 rounded-full text-xs md:text-sm ${colors.aboutTagBg} ${colors.textPrimary}`}
         >
-          Exames de imagem
+          {ABOUT_TAG}
         </span>
 
         <h1
           className={`text-5xl md:text-6xl lg:text-7xl font-semibold ${colors.aboutGradientH1} text-transparent bg-clip-text`}
         >
-          VidaBild
+          {PRESENTATION_H1}
         </h1>
 
         <div className="rounded-full bg-blue-50/75 p-2">
           <h3
             className={`text-xl md:text-2xl lg:text-3xl font-light bg-gradient-to-r ${colors.aboutGradientH3} text-transparent bg-clip-text`}
           >
-            Especializados em lhe atender.
+            {PRESENTATION_H3}
           </h3>
         </div>
 
@@ -56,17 +66,17 @@ const Presentation: React.FC = () => (
             <button
               className={`px-6 py-3 rounded-lg font-semibold ${colors.buttonSecondaryText} ${colors.buttonSecondary} ${colors.buttonSecondaryHover} transition hover:scale-110`}
             >
-              Nossos exames
+              {BUTTON_EXAMS}
             </button>
           </Link>
 
-          <Link href={getWhatsappContactUrl("quero agendaaaarrrr")}>
+          <Link href={getWhatsappContactUrl(WHATSAPP_MESSAGE_BOOKING)}>
             <button
               className={`px-6 py-3 rounded-lg font-semibold ${colors.buttonPrimaryText} ${colors.buttonPrimary} ${colors.buttonPrimaryHover} transition hover:scale-110`}
             >
               <div className="flex items-center gap-1">
                 <FaWhatsapp size={25} />
-                Agende seu Exame
+                {BUTTON_WHATSAPP}
               </div>
             </button>
           </Link>

@@ -7,17 +7,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { colors } from "../constants/constants";
 import { WhatsAppButton } from "./WhatsAppButton";
-
-const navItems = [
-  { label: "Sobre nós", href: "/about" },
-  { label: "Exames", href: "/exams" },
-];
+import {
+  NAV_ITEMS,
+  LINK_CLASSES,
+  LOGO_TEXT,
+  LOGO_ALT,
+  WHATSAPP_MESSAGE,
+  WHATSAPP_LABEL,
+  IMG_LOGO_SRC,
+} from "../constants/constants";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
-
-  const linkClasses =
-    "opacity-70 hover:opacity-100 transition-opacity duration-300";
 
   return (
     <header
@@ -31,18 +32,23 @@ const Navbar: React.FC = () => {
           className={`text-xl md:text-2xl font-semibold bg-gradient-to-r ${colors.logoGradient} ${colors.logoText} hover:scale-110 transition duration-300`}
         >
           <div className="flex items-center gap-2">
-            VidaBild
-            <Image src="/logo_01.png" width={45} height={45} alt="logo" />
+            {LOGO_TEXT}
+            <Image
+              src={`${IMG_LOGO_SRC}`}
+              width={45}
+              height={45}
+              alt={LOGO_ALT}
+            />
           </div>
         </Link>
 
         {/* Menu para telas médias e grandes */}
         <ul className="hidden md:flex items-center gap-10">
-          <li className={linkClasses}>
-            <WhatsAppButton message="Olá" label="Contato" />
+          <li className={LINK_CLASSES}>
+            <WhatsAppButton message={WHATSAPP_MESSAGE} label={WHATSAPP_LABEL} />
           </li>
-          {navItems.map((item) => (
-            <li key={item.label} className={linkClasses}>
+          {NAV_ITEMS.map((item) => (
+            <li key={item.label} className={LINK_CLASSES}>
               <a href={item.href}>{item.label}</a>
             </li>
           ))}
@@ -63,10 +69,10 @@ const Navbar: React.FC = () => {
               transition={{ duration: 0.2 }}
               className={`md:hidden absolute top-16 left-0 right-0 ${colors.menuBg} border-b ${colors.menuBorder} py-16 space-y-5 text-center shadow-lg`}
             >
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <li
                   key={item.label}
-                  className="group px-10 opacity-90 hover:opacity-100 transition-opacity"
+                  className={`group px-10 opacity-90 hover:opacity-100 transition-opacity`}
                 >
                   <a href={item.href} onClick={() => setMenuOpen(false)}>
                     <span
@@ -78,7 +84,10 @@ const Navbar: React.FC = () => {
                 </li>
               ))}
               <li className="px-10">
-                <WhatsAppButton message="Olá" label="Contato" />
+                <WhatsAppButton
+                  message={WHATSAPP_MESSAGE}
+                  label={WHATSAPP_LABEL}
+                />
               </li>
             </motion.ul>
           )}
