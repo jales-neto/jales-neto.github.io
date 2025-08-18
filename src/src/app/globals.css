@@ -2,11 +2,11 @@
 @custom-variant hover (&:hover);
 
 button {
-  -webkit-tap-highlight-color: transparent; /* remove highlight */
-  -webkit-user-select: none; /* evita seleção acidental */
-  -webkit-touch-callout: none; /* previne menu de toque longo */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 button:active {
-  background-color: inherit; /* ou a cor original do botão */
+  background-color: inherit;
 }

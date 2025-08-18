@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Links úteis */}
+        {/* Links */}
         <div className="flex flex-col gap-2">
           <h2 className={`font-semibold ${colors.footerText}`}>
             {FOOTER_SECTION_LINKS}
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
           </ul>
         </div>
 
-        {/* Contato */}
+        {/* Contact/Address */}
         <div className="flex flex-col gap-2">
           <h2 className={`font-semibold ${colors.footerText}`}>
             {FOOTER_SECTION_CONTACT}

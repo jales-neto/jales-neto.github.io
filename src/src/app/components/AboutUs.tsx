@@ -33,7 +33,7 @@ import {
 const AboutUs: React.FC = () => (
   <section className="py-16 px-4 md:px-20 bg-gray-50">
     <div className="max-w-7xl mx-auto space-y-16">
-      {/* Missão da clínica */}
+      {/* Mission */}
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2">
           <h2
@@ -55,7 +55,7 @@ const AboutUs: React.FC = () => (
         </div>
       </div>
 
-      {/* Valores da clínica */}
+      {/* Business intrinsic values */}
       <div className="flex flex-col md:flex-row-reverse items-center gap-8">
         <div className="md:w-1/2">
           <h2
@@ -77,7 +77,7 @@ const AboutUs: React.FC = () => (
         </div>
       </div>
 
-      {/* Estrutura da clínica */}
+      {/* Structure */}
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2">
           <h2
@@ -99,7 +99,7 @@ const AboutUs: React.FC = () => (
         </div>
       </div>
 
-      {/* Equipe médica */}
+      {/* Medical team */}
       <div className="flex flex-col md:flex-row-reverse items-center gap-8">
         <div className="md:w-1/2">
           <h2
@@ -121,7 +121,7 @@ const AboutUs: React.FC = () => (
         </div>
       </div>
 
-      {/* Compromisso com a comunidade */}
+      {/* Comunity healthcare */}
       <div className="flex flex-col md:flex-row items-center gap-8">
         <div className="md:w-1/2">
           <h2

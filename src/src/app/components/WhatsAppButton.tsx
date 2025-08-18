@@ -1,3 +1,5 @@
+// TODO: get rid of this file in the future
+"use client"
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
