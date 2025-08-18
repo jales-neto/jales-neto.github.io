@@ -28,17 +28,12 @@ const Presentation: React.FC = () => (
       className="object-cover -z-10 rounded-b-2xl shadow-lg"
     />
 
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="flex flex-col-reverse items-center justify-center md:flex-row gap-8 md:gap-16 lg:24"
-    >
+    <div className="flex flex-col-reverse items-center justify-center md:flex-row gap-8 md:gap-16 lg:24">
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+        transition={{ duration: 1 }}
         className="flex flex-col items-center md:items-start justify-center gap-3 w-full max-w-3xl bg-blue-50/55 rounded-xl p-8 md:p-12"
       >
         <span
@@ -82,7 +77,7 @@ const Presentation: React.FC = () => (
           </Link>
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   </div>
 );
 
