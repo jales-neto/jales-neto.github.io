@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
       className={`fixed top-0 w-full backdrop-blur-md ${colors.navbarBg} border-b ${colors.navbarBorder} z-50`}
     >
       <nav
-        className={`max-w-7xl mx-auto py-6 px-6 lg:px-32 flex items-center justify-between ${colors.textPrimary}`}
+        className={`max-w-7xl mx-auto py-6 px-6 lg:px-32 flex flex-row items-center justify-between ${colors.textPrimary}`}
       >
         <Link
           href="/"

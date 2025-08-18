@@ -35,9 +35,9 @@ export const getWhatsappContactUrl = (message: string) => {
 
 // sources paths
 export const IMG_LOGO_SRC = "/logo_01.png";
-export const IMG_EXAM_ULTRASSOM_ABDOMINAL_SRC = "./bg_01.png";
-export const IMG_EXAM_ULTRASSOM_OBSTETRICO_SRC = "./bg_01.png";
-export const IMG_EXAM_ULTRASSOM_TIREOIDE_SRC = "./bg_01.png";
+export const IMG_EXAM_ULTRASSOM_ABDOMINAL_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_OBSTETRICO_SRC = "/bg_01.png";
+export const IMG_EXAM_ULTRASSOM_TIREOIDE_SRC = "/bg_01.png";
 export const IMG_ABOUT_IMAGE_VALUES_SRC = "/bg_01.png";
 export const IMG_ABOUT_IMAGE_MISSION_SRC = "/bg_01.png";
 export const IMG_ABOUT_IMAGE_STRUCTURE_SRC = "/bg_01.png";
@@ -49,23 +49,19 @@ export const IMG_EXAM_ULTRASSOM_ABDOMEN_TOTAL_SRC = "/bg_01.png";
 export const IMG_EXAM_ULTRASSOM_ABDOMEN_SUPERIOR_SRC = "/bg_01.png";
 export const IMG_EXAM_ULTRASSOM_CAROTIDA_DOPPLER_SRC = "/bg_01.png";
 
-// Labels de navegação
 export const NAV_ITEM_SOBRE = "Sobre nós";
 export const NAV_ITEM_EXAMES = "Exames";
 
-// Logo
 export const LOGO_TEXT = "VidaBild";
 export const LOGO_ALT = "logo";
 
-// WhatsAppButton
-export const WHATSAPP_MESSAGE = "Olá";
+export const WHATSAPP_MESSAGE =
+  "Olá, gostaria de mais informações sobre a clínica.";
 export const WHATSAPP_LABEL = "Contato";
 
-// Classes e efeitos podem permanecer inline, mas se quiser, podem virar constantes
 export const LINK_CLASSES =
   "opacity-70 hover:opacity-100 transition-opacity duration-300";
 
-// Se quiser mapear navItems com as consts:
 export const NAV_ITEMS = [
   { label: NAV_ITEM_SOBRE, href: "/about" },
   { label: NAV_ITEM_EXAMES, href: "/exams" },
@@ -78,9 +74,9 @@ export const PRESENTATION_H3 = "Especializados em lhe atender.";
 export const BUTTON_EXAMS = "Nossos exames";
 export const BUTTON_WHATSAPP = "Agende seu Exame";
 
-export const WHATSAPP_MESSAGE_BOOKING = "quero agendaaaarrrr";
+export const WHATSAPP_MESSAGE_BOOKING =
+  "Olá, gostaria de agendar um exame de ultrassom.";
 
-// Logo e descrição
 export const FOOTER_LOGO_TEXT = "VidaBild";
 export const FOOTER_DESCRIPTION =
   "Clínica em diagnósticos precisos e atendimento humanizado.";
@@ -93,7 +89,8 @@ export const FOOTER_LINK_EXAMS = "Exames";
 
 export const FOOTER_PHONE = "Telefone: (00) 0000-0000";
 export const FOOTER_EMAIL = "Email: contato@exemplo.com";
-export const FOOTER_WHATSAPP_MESSAGE = "Olá!";
+export const FOOTER_WHATSAPP_MESSAGE =
+  "Olá, preciso de informações sobre exames de ultrassom.";
 
 export const FOOTER_COPYRIGHT_PREFIX = "Todos os direitos reservados.";
 export const FOOTER_RESPONSIBLE_TECH =
