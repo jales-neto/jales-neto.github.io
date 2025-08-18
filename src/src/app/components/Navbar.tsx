@@ -2,11 +2,22 @@
 
 import React, { useState } from "react";
 import { BiMenu } from "react-icons/bi";
-import { colors } from "../constants/colors";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { colors } from "../constants/constants";
+import { WhatsAppButton } from "./WhatsAppButton";
+
+const navItems = [
+  { label: "Sobre nós", href: "/about" },
+  { label: "Exames", href: "/exams" },
+];
 
 const Navbar: React.FC = () => {
-  const [isMenuOpen, setMenuOpen] = useState<boolean>(false);
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const linkClasses =
+    "opacity-70 hover:opacity-100 transition-opacity duration-300";
 
   return (
     <header
@@ -15,29 +26,34 @@ const Navbar: React.FC = () => {
       <nav
         className={`max-w-7xl mx-auto py-6 px-6 lg:px-32 flex items-center justify-between ${colors.textPrimary}`}
       >
-        <a
-          href="#about"
+        <Link
+          href="/"
           className={`text-xl md:text-2xl font-semibold bg-gradient-to-r ${colors.logoGradient} ${colors.logoText} hover:scale-110 transition duration-300`}
         >
-          VidaBild 🧬
-        </a>
+          <div className="flex items-center gap-2">
+            VidaBild
+            <Image src="/logo_01.png" width={45} height={45} alt="logo" />
+          </div>
+        </Link>
 
-        <ul className="hidden md:flex gap-10">
-          <li className="opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <a href="#about">Sobre</a>
+        {/* Menu para telas médias e grandes */}
+        <ul className="hidden md:flex items-center gap-10">
+          <li className={linkClasses}>
+            <WhatsAppButton message="Olá" label="Contato" />
           </li>
-          <li className="opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <a href="#contents">Conteúdos</a>
-          </li>
-          <li className="opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <a href="#contacts">Contatos</a>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.label} className={linkClasses}>
+              <a href={item.href}>{item.label}</a>
+            </li>
+          ))}
         </ul>
 
+        {/* Botão do menu para telas pequenas */}
         <button className="md:hidden" onClick={() => setMenuOpen(!isMenuOpen)}>
           <BiMenu className="text-3xl" />
         </button>
 
+        {/* Menu expandido para telas pequenas */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.ul
@@ -45,20 +61,25 @@ const Navbar: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.2 }}
-              className={`md:hidden absolute top-16 left-0 right-0 ${colors.menuBg} border-b ${colors.menuBorder} space-y-5 py-16 text-center shadow-lg`}
+              className={`md:hidden absolute top-16 left-0 right-0 ${colors.menuBg} border-b ${colors.menuBorder} py-16 space-y-5 text-center shadow-lg`}
             >
-              {["sobre", "conteúdos", "contatos"].map((item) => (
+              {navItems.map((item) => (
                 <li
-                  key={item}
+                  key={item.label}
                   className="group px-10 opacity-90 hover:opacity-100 transition-opacity"
                 >
-                  <a href={`#${item}`} onClick={() => setMenuOpen(false)}>
-                    <span className={`text-lg ${colors.menuItemText} ${colors.menuItemHover} transition-colors`}>
-                      {item.charAt(0).toUpperCase() + item.slice(1)}
+                  <a href={item.href} onClick={() => setMenuOpen(false)}>
+                    <span
+                      className={`text-lg ${colors.menuItemText} ${colors.menuItemHover} transition-colors`}
+                    >
+                      {item.label}
                     </span>
                   </a>
                 </li>
               ))}
+              <li className="px-10">
+                <WhatsAppButton message="Olá" label="Contato" />
+              </li>
             </motion.ul>
           )}
         </AnimatePresence>
