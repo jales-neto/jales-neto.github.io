@@ -1,5 +1,5 @@
 export const colors = {
-  navbarBg: "bg-blue-50/90",
+  navbarBg: "bg-blue-50/55",
   navbarBorder: "border-gray-300",
   textGradient: "from-teal-400 via-cyan-500 to-blue-500",
   logoGradient: "from-blue-600 via-sky-500 to-blue-400",
