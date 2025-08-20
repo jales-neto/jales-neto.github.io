@@ -71,7 +71,7 @@ export const ABOUT_TAG = "Exames de imagem";
 export const PRESENTATION_H1 = "VidaBild";
 export const PRESENTATION_H3 = "Especializados em lhe atender.";
 
-export const BUTTON_EXAMS = "Nossos exames";
+export const BUTTON_EXAMS = "Nossos serviços";
 export const BUTTON_WHATSAPP = "Agende seu Exame";
 
 export const WHATSAPP_MESSAGE_BOOKING =
